@@ -6,3 +6,11 @@ This command will mount the host Docker server's Unix socket to the container, a
 docker run -it -v /var/run/docker.sock:/var/run/docker.sock -v jenkins-data:/var/jenkins_home -p 8080:8080 getintodevops/jenkins-withdocker:lts-docker18.06.0
 ```
 The image is generated from https://github.com/getintodevops/jenkins-withdocker
+
+# Or
+
+```
+docker run -it -v /var/run/docker.sock:/var/run/docker.sock \
+-v jenkins-data:/var/jenkins_home -p 8080:8080 \
+getintodevops/jenkins-withdocker:lts-docker18.06.0
+```
