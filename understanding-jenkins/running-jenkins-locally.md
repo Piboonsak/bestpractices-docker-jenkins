@@ -10,7 +10,8 @@ The image is generated from https://github.com/getintodevops/jenkins-withdocker
 # Or
 
 ```
-docker run -it -v /var/run/docker.sock:/var/run/docker.sock \
+docker run -it --name jenkin \
+-v /var/run/docker.sock:/var/run/docker.sock \
 -v jenkins-data:/var/jenkins_home -p 8080:8080 \
 getintodevops/jenkins-withdocker:lts-docker18.06.0
 ```
